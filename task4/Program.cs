@@ -1,3 +1,4 @@
+
 namespace SimpleExamSystem
 {
     // ======= Basic People =======
@@ -42,6 +43,22 @@ namespace SimpleExamSystem
         public List<string> Options = new List<string>();
         public List<string> CorrectLabels = new List<string>();
         public string CorrectText;
+
+        public Question()
+        {
+        }
+
+        public Question(int qId, string text, string type, string difficulty, int mark, List<string> options, List<string> correctLabels, string correctText)
+        {
+            QId = qId;
+            Text = text;
+            Type = type;
+            Difficulty = difficulty;
+            Mark = mark;
+            Options = options;
+            CorrectLabels = correctLabels;
+            CorrectText = correctText;
+        }
     }
 
     // ======= Exam =======
@@ -50,6 +67,17 @@ namespace SimpleExamSystem
         public string Title;
         public string Subject;
         public List<Question> Questions = new List<Question>();
+
+        public Exam()
+        {
+        }
+
+        public Exam(string title, string subject, List<Question> questions)
+        {
+            Title = title;
+            Subject = subject;
+            Questions = questions;
+        }
 
         public int TotalMarks()
         {
@@ -69,8 +97,8 @@ namespace SimpleExamSystem
 
         static void Main(string[] args)
         {
-            Console.WriteLine("===Welcome to our Examntion system ===");
-            SeedSubjects();
+            Console.WriteLine("==> Welcome To Our Examntion System Enjoy <==");
+            //SeedSubjects();
 
             while (true)
             {
