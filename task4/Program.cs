@@ -72,7 +72,7 @@ namespace SimpleExamSystem
 
         static void Main(string[] args)
         {
-            Console.WriteLine("=== Simple Examination System (OOP, Basic) ===");
+            Console.WriteLine("===Welcome to our Examntion system ===");
             SeedSubjects();
 
             while (true)
